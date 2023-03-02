@@ -1,0 +1,6 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+getname:
+  path: /getname/{nom}
+  controller: App\Controller\ClubController::getName

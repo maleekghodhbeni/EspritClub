@@ -1,0 +1,14 @@
+<h1>Liste des formations</h1>
+
+
+
+{% if formationtheorique|length > 0 %}
+    <h2>Formations théoriques :</h2>
+    <ul>
+        {% for title in formationtheorique %}
+            <li>{{ title }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+

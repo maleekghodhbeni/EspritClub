@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des formations{% endblock %}
+
+{% block body %}
+    <h1>Liste des formations</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Référence</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Nombre de participants</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for formation in formations %}
+                <tr>
+                    <td>{{ formation.ref }}</td>
+                    <td>{{ formation.Titre }}</td>
+                    <td>{{ formation.Description }}</td>
+                    <td>{{ formation.date_debut }}</td>
+                    <td>{{ formation.date_fin }}</td>
+                    <td>{{ formation.nb_participants }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+    <h2>Nombre de formations : {{ count }}</h2>
+    <h2>Formation avec le plus de participants :</h2>
+  {% if formations|length > 0 %}
+    <p>{{ max_formation.Titre }}</p>
+  {% else %}
+    <p>Erreur</p>
+  {% endif %}
+{% endblock %}

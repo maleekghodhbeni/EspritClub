@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Esprit Clubs{% endblock %}
+
+{% block body %}
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-wrapper {
+    margin-top: 2em;
+  }
+
+  .description {
+    margin-top: 2em;
+    text-align: center;
+  }
+</style>
+
+<div class="title-wrapper">
+  <h1>Esprit Clubs</h1>
+</div>
+
+<div class="description">
+  <p>Description...</p>
+</div>
+
+<img src="{{ asset('images/club.PNG') }}" alt="Esprit Clubs">
+{% endblock %}
+
+
+
